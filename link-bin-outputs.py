@@ -21,7 +21,7 @@ def get_bin_attr_files(package_json):
     except KeyError:
         return tuple()
     else:
-        if isinstance(bins, basestring):
+        if isinstance(bins, str):
             return ((package_json['name'], bins),)
         else:
             return bins.items()
